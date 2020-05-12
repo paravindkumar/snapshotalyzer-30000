@@ -19,3 +19,8 @@ shotty uses the configuration file created by the AWS cli. e.g.
 *command* is instances, volumes, or snapshots
 *subcommand* - depends on command
 *project* is optional
+
+
+reference to boto3 documentation
+https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html
+
