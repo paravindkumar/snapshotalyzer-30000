@@ -27,7 +27,7 @@ def snapshots():
 @snapshots.command('list')
 @click.option('--project', default=None,
               help="lists all snapshots for project (tag Project:<name>)")
-def list_instances(project):
+def list_snapshots(project):
     "List snapshots of all instances"
     instances = filter_instances(project)
 
@@ -52,7 +52,7 @@ def volumes():
 @volumes.command('list')
 @click.option('--project', default=None,
               help="Only instances for project (tag Project:<name>)")
-def list_instances(project):
+def list_volumes(project):
     "List Volumes of all instances"
     instances = filter_instances(project)
 
@@ -79,7 +79,7 @@ def instances():
                    help="Create snapshots of all volumes")
 @click.option('--project', default=None,
               help="Only instances for project (tag Project:<name>)")
-def list_instances(project):
+def create_snapshots(project):
     "Create snapshots for EC2 instances"
 
     instances = filter_instances(project)
@@ -144,7 +144,7 @@ def stop_instances(project):
 @instances.command('start')
 @click.option('--project', default=None,
               help="Only instances for project (tag Project:<name>)")
-def stop_instances(project):
+def start_instances(project):
     "Start EC2 instances"
     instances = filter_instances(project)
 
